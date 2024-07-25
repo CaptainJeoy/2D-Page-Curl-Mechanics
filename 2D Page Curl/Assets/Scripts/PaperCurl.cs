@@ -290,7 +290,7 @@ public class PaperCurl : MonoBehaviour
 
             //This clamps the position of the Top Right Cover to any number less than or equal to both x=3, y=3.
             temp.x = (temp.x <= 3f) ? temp.x + (((currVec.x + currVec.y) / 2f) * pullSpeed * Time.deltaTime) : 3f;
-            temp.y = (temp.y <= 3f) ? temp.y + (((currVec.x + currVec.y) / 2f) * pullSpeed * Time.deltaTime) : 3f;
+            temp.y = (temp.x <= 3f) ? temp.y + (((currVec.x + currVec.y) / 2f) * pullSpeed * Time.deltaTime) : 3f;
 
             topRightcover.position = temp;
 
